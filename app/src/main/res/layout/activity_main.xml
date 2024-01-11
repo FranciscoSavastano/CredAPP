@@ -16,9 +16,20 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Credit Card Companion APP" />
+
+        <TextView
+            android:id="@+id/textLimite"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Insira o limite atual do seu cartão" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/entrylimite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:baselineAligned="false"
@@ -27,19 +38,35 @@
             android:text=" " />
 
         <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="TextView" />
+            android:id="@+id/textSalario"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Insira seu salario" />
+
+        <EditText
+            android:id="@+id/entrysalario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:ems="10"
+            android:inputType="text"
+            android:text=" " />
 
         <Button
             android:id="@+id/go_pie_chart"
-            android:text="Enviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp">
+            android:layout_margin="15dp"
+            android:onClick="proxtela"
+            android:text="Enviar">
 
         </Button>
+        <TextView
+            android:id="@+id/testeview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="" />
+
 
 
     </LinearLayout>

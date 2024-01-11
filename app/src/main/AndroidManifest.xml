@@ -13,9 +13,13 @@
         android:theme="@style/Theme.AndroidCharts"
         tools:targetApi="31">
         <activity
+            android:name=".AddValorActivity"
+            android:exported="false"
+            android:label="@string/title_activity_add_valor"
+            android:theme="@style/Theme.AndroidCharts" />
+        <activity
             android:name=".RadarChartActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -23,7 +27,6 @@
         <activity
             android:name=".PieChartActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -31,9 +34,6 @@
         <activity
             android:name=".BarChartActivity"
             android:exported="false">
-
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -41,13 +41,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
 
             <meta-data
                 android:name="android.app.lib_name"
