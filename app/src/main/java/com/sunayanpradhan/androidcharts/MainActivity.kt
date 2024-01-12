@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             
             val textView = findViewById<View>(R.id.testeview) as TextView
             val TextWritten = TextLimite.text.toString().toFloat()
-            val intent = Intent(this,AddValorActivity::class.java)
+            val intent = Intent(this,MainActivity2::class.java)
             textView.text = TextWritten.toString()
             intent.putExtra("IntLimite", IntLimite)
             intent.putExtra("IntSalario", IntSalario)

@@ -13,9 +13,9 @@
         android:theme="@style/Theme.AndroidCharts"
         tools:targetApi="31">
         <activity
-            android:name=".AddValorActivity"
+            android:name=".MainActivity2"
             android:exported="false"
-            android:label="@string/title_activity_add_valor"
+            android:label="@string/title_activity_main2"
             android:theme="@style/Theme.AndroidCharts" />
         <activity
             android:name=".RadarChartActivity"
