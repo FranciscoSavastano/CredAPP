@@ -22,15 +22,21 @@ class MainActivity : AppCompatActivity() {
 
             val TextLimite = findViewById<View>(R.id.entrylimite) as EditText
             val TextSalario = findViewById<View>(R.id.entrysalario) as EditText
-            val IntLimite = TextLimite.text.toString().toFloat()
-            val IntSalario = TextSalario.text.toString().toFloat()
+            var IntLimite = TextLimite.text.toString().toFloat()
+            var IntSalario = TextSalario.text.toString().toFloat()
             
             val textView = findViewById<View>(R.id.testeview) as TextView
             val TextWritten = TextLimite.text.toString().toFloat()
+            var limitemudado: Boolean = false
             val intent = Intent(this,MainActivity2::class.java)
+            if(IntLimite > IntSalario){
+                IntLimite = IntSalario / 2
+                limitemudado = true
+            }
             textView.text = TextWritten.toString()
             intent.putExtra("IntLimite", IntLimite)
             intent.putExtra("IntSalario", IntSalario)
+            intent.putExtra("limitemudado", limitemudado)
             startActivity(intent)
 
 

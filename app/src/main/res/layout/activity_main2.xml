@@ -1,33 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".MainActivity2">
+    tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Menu Principal" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <TextView
+            android:id="@+id/info1"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="" />
 
-    <include layout="@layout/content_main" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        <TextView
+            android:id="@+id/info2"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="test" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <TextView
+            android:id="@+id/resultlimite"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Seu limite total" />
+
+        <TextView
+            android:id="@+id/totallimite"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="" />
+
+
+        <TextView
+            android:id="@+id/resultsalario"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Seu limite disponivel" />
+
+        <TextView
+            android:id="@+id/atuallimite"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="" />
+
+
+        <Button
+            android:id="@+id/go_pie_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Ver Grafico">
+	</Button>
+
+	<EditText
+    	    android:id="@+id/addvalor"
+    	    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    	    android:baselineAligned="false"
+    	    android:ems="10"
+    	    android:inputType="text"
+	    android:autofillHints="Valor" />
+
+
+        <AutoCompleteTextView
+    	    android:id="@+id/addpessoa"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:baselineAligned="false"
+    	    android:ems="10"
+    	    android:inputType="text"/>
+
+	<Spinner
+    	    android:id="@+id/spinner"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="match_parent" />
+
+
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:src="@android:drawable/ic_menu_add" />
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

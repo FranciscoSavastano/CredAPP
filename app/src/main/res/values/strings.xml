@@ -44,4 +44,7 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="title_activity_main2">MainActivity2</string>
+    <string name="add_valor_dialog">adicionar gasto</string>
+    <string name="add">Adicionar</string>
+    <string name="cancel">Cancelar</string>
 </resources>
