@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <TextView
+		<TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
@@ -33,7 +33,7 @@
             android:id="@+id/info2"
             android:layout_width="match_parent"
             android:layout_height="37dp"
-            android:text="test" />
+            android:text="" />
 
 
         <TextView
@@ -67,19 +67,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="Ver Grafico">
-	</Button>
+            android:text="Ver Grafico" />
 
-	<EditText
+
+		<TextView
+			android:id="@+id/textovalor"
+			android:layout_width="match_parent"
+			android:layout_height="37dp"
+			android:text="Digite o valor gasto" />
+
+		<EditText
     	    android:id="@+id/addvalor"
     	    android:layout_width="match_parent"
             android:layout_height="wrap_content"
     	    android:baselineAligned="false"
     	    android:ems="10"
     	    android:inputType="text"
-	    android:autofillHints="Valor" />
+	    	android:autofillHints="Valor" />
 
-
+		<TextView
+			android:id="@+id/textopessoa"
+			android:layout_width="match_parent"
+			android:layout_height="37dp"
+			android:text="Digite o nome da pessoa responsavel pelo gasto" />
         <AutoCompleteTextView
     	    android:id="@+id/addpessoa"
     	    android:layout_width="match_parent"
@@ -87,15 +97,6 @@
     	    android:baselineAligned="false"
     	    android:ems="10"
     	    android:inputType="text"/>
-
-	<Spinner
-    	    android:id="@+id/spinner"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="match_parent" />
-
-
-
-
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
