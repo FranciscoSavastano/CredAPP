@@ -22,24 +22,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         goPieChart=findViewById(R.id.go_pie_chart)
+        val dir = this.getDir("GastosAPP", Context.MODE_APPEND);
+        val intent = Intent(this,MainActivity2::class.java)
+        val fileName = "infostart.txt"
+        val fileDir = dir.toString() + "/" + "infostart.txt"
+        val file = File(fileDir)
+
+        if (!file.exists()) {
+            file.createNewFile()
+            Log.d("Criado","File '$fileName' created.")
+
+        } else {
+            println("File '$fileName' already exists.")
+            val text = file.readText()
+            println("File content: $text")
+            Log.d("Existe","File '$fileName' Ja existe.")
+            startActivity(intent)
+        }
         goPieChart.setOnClickListener() {
             val intent = Intent(this,MainActivity2::class.java)
             val dir = this.getDir("GastosAPP", Context.MODE_APPEND);
-            val fileName = "infostart.txt"
-            val fileDir = dir.toString() + "/" + "infostart.txt"
-            val file = File(fileDir)
-
-            if (!file.exists()) {
-                file.createNewFile()
-                Log.d("Criado","File '$fileName' created.")
-
-            } else {
-                println("File '$fileName' already exists.")
-                val text = file.readText()
-                println("File content: $text")
-                Log.d("Existe","File '$fileName' Ja existe.")
-                startActivity(intent)
-            }
             val TextLimite = findViewById<View>(R.id.entrylimite) as EditText
             val TextSalario = findViewById<View>(R.id.entrysalario) as EditText
             var IntLimite = TextLimite.text.toString().toFloat()
